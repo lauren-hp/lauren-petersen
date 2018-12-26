@@ -8,6 +8,6 @@ const About = () => (
       </a>
     </Link>
   </div>
-)
+);
 
 export default About;
