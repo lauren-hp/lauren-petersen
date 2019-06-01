@@ -3,11 +3,11 @@ import Link from "next/link";
 const Home = () => {
   return (
     <div>
-      <Link href="/about">
+      {/* <Link href="/about">
         <a>
           About
         </a>
-      </Link>
+      </Link> */}
     </div>
   );
 };
