@@ -10,6 +10,9 @@ export class HeaderBase extends React.Component {
         <div className="orbit-2 orbit" />
         <div className="orbit-3 orbit" />
 
+        <div className="star star1" />
+        <div className="star star2" />
+
         {!this.props.isMenuOpen && (
           <div>
             <div className="font title">
@@ -17,15 +20,12 @@ export class HeaderBase extends React.Component {
             </div>
       
             <div className="font subtitle">
-              bookworm / 
+              Hi there. I am a 
               <span className="emphasis"> software developer </span>
-               / cheesemaker / museum-goer / hiker / philosophy student /
-              traveler / art enthusiast / 
+              with a passion for frontend development. I am also a
               <span className="emphasis"> writer </span>
-               / failed chemist / cat lady / stargazer / runner / 
-              oxford comma proponent / coloradoan / woman / 
-              <span className="emphasis"> new yorker </span>
-               / data lover / bookbinder 
+               and an avid reader. I live in
+              <span className="emphasis"> New York</span>.
             </div>
           </div>
         )}
@@ -37,6 +37,32 @@ export class HeaderBase extends React.Component {
 }
 
 export const Header = styled(HeaderBase)`
+  .star {
+    position: absolute;
+    border-radius: 50%;
+    background-color: ${props => props.isMenuOpen ? "#ededed" : "white"};
+  }
+
+  .star1 {
+    animation: circle 12s infinite linear;
+    height: 30px;
+    width: 30px;
+    left: -120px;
+    top: 85px;
+    margin-left: 100px;
+    transform-origin: 118px center;
+  }
+
+  /* .star2 {
+    animation: circle 10s infinite linear;
+    height: 20px;
+    width: 20px;
+    left: -310px;
+    top: 155px;
+    margin-left: 200px;
+    transform-origin: 280px center;
+  } */
+
   .orbit {
     position: absolute;
     height: 400px;
@@ -52,7 +78,8 @@ export const Header = styled(HeaderBase)`
     top: -4px;
     height: 200px;
     width: 200px;
-    background-color: ${props => props.isMenuOpen ? "#eaeaea" : "white"};
+    border: 4px solid;
+    border-color: ${props => props.isMenuOpen ? "#ededed" : "white"};
     z-index: 1;
     border-radius: 50%;
   }
@@ -60,13 +87,13 @@ export const Header = styled(HeaderBase)`
   .orbit-1 {
     left: -120px;
     top: -120px;
-    padding: 70px;
+    /* padding: 70px; */
   }
 
   .orbit-2 {
     left: -170px;
     top: -170px;
-    padding: 150px;
+    /* padding: 150px; */
   }
 
   .orbit-3 {
@@ -75,19 +102,17 @@ export const Header = styled(HeaderBase)`
     padding: 230px;
   }
 
-
   .font {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Sorts Mill Goudy', serif;
     color: white;
   }
 
   .title {
-    font-size: 70px;
+    font-size: 60px;
     position: absolute;
     top: 250px;
     right: 50px;
-    letter-spacing: 13px;
-    
+    letter-spacing: 5px;
   }
 
   .subtitle {
@@ -103,6 +128,8 @@ export const Header = styled(HeaderBase)`
   }
 
   .emphasis {
-    color: black;
+    color: #8d7535;
   }
+
+  @keyframes circle { to { transform: rotate(1turn); } }
 `

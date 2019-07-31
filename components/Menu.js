@@ -32,16 +32,16 @@ export const Menu = styled(MenuBase)`
 
   @keyframes fade-in {
     0% {
-      background-color: #bababa;
+      background-color: #d1cbbd;
     }
     100% {
       background-color: white;
       
     }
-  }
+  } 
 
   .link {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Sorts Mill Goudy', serif;
     position: absolute;
     font-size: 20px;
     font-weight: 400;

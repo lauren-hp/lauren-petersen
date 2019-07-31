@@ -29,7 +29,7 @@ export default class Page extends React.Component {
 const Content = styled.div`
   width: 100%;
   height: 100vh;
-  background-color: #bababa;
+  background-color: #d1cbbd;
   position: relative;
 
   .button {
