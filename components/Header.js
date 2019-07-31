@@ -12,6 +12,7 @@ export class HeaderBase extends React.Component {
 
         <div className="star star1" />
         <div className="star star2" />
+        <div className="star star3" />
 
         {!this.props.isMenuOpen && (
           <div>
@@ -20,7 +21,7 @@ export class HeaderBase extends React.Component {
             </div>
       
             <div className="font subtitle">
-              Hi there. I am a 
+              I am a 
               <span className="emphasis"> software developer </span>
               with a passion for frontend development. I am also a
               <span className="emphasis"> writer </span>
@@ -44,29 +45,37 @@ export const Header = styled(HeaderBase)`
   }
 
   .star1 {
-    animation: circle 12s infinite linear;
-    height: 30px;
-    width: 30px;
-    left: -120px;
-    top: 85px;
-    margin-left: 100px;
-    transform-origin: 118px center;
-  }
-
-  /* .star2 {
-    animation: circle 10s infinite linear;
+    animation: circle 30s infinite linear;
     height: 20px;
     width: 20px;
-    left: -310px;
-    top: 155px;
-    margin-left: 200px;
-    transform-origin: 280px center;
-  } */
+    left: -270px;
+    top: 85px;
+    margin-left: 100px;
+    transform-origin: 265px center;
+  }
+
+  .star2 {
+    animation: circle 50s infinite linear;
+    height: 20px;
+    width: 20px;
+    left: -415px;
+    top: 85px;
+    margin-left: 100px;
+    transform-origin: 415px center; 
+  }
+
+  .star3 {
+    animation: circle 80s infinite linear;
+    height: 20px;
+    width: 20px;
+    left: -570px;
+    top: 85px;
+    margin-left: 100px;
+    transform-origin: 565px center; 
+  }
 
   .orbit {
     position: absolute;
-    height: 400px;
-    width: 400px;
     border-radius: 50%;
     border: 1px solid;
     border-color: ${props => props.isMenuOpen ? "#cecece" : "white"};
@@ -85,21 +94,27 @@ export const Header = styled(HeaderBase)`
   }
 
   .orbit-1 {
-    left: -120px;
-    top: -120px;
-    /* padding: 70px; */
+    height: 500px;
+    width: 500px;
+    /* Note: Origin is 100px, 100px */
+    left: -150px;
+    top: -150px;
   }
 
   .orbit-2 {
-    left: -170px;
-    top: -170px;
-    /* padding: 150px; */
+    height: 800px;
+    width: 800px;
+    /* Note: Origin is 100px, 100px */
+    left: -300px;
+    top: -300px;
   }
 
   .orbit-3 {
-    left: -210px;
-    top: -210px;
-    padding: 230px;
+    height: 1100px;
+    width: 1100px;
+    /* Note: Origin is 100px, 100px */
+    left: -450px;
+    top: -450px;
   }
 
   .font {
@@ -110,26 +125,27 @@ export const Header = styled(HeaderBase)`
   .title {
     font-size: 60px;
     position: absolute;
-    top: 250px;
-    right: 50px;
+    top: 350px;
+    right: 70px;
     letter-spacing: 5px;
   }
 
   .subtitle {
     position: absolute;
     width: 50%;
-    right: 50px;
-    top: 400px;
+    right: 70px;
+    top: 500px;
     font-size: 20px;
     font-weight: 300;
     line-height: 2;
     letter-spacing: 2px;
     text-align: justify;
+    text-align: right;
   }
 
   .emphasis {
     color: #8d7535;
   }
 
-  @keyframes circle { to { transform: rotate(1turn); } }
+  @keyframes circle { from { transform: rotate(1turn); } }
 `

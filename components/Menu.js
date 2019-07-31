@@ -55,25 +55,25 @@ export const Menu = styled(MenuBase)`
 
   .link1 {
     right: 30%;
-    top: 30%;
+    top: 40%;
     animation-duration: 0.11s; 
   }
 
   .link2 {
     right: 15%;
-    top: 40%;
+    top: 50%;
     animation-duration: 0.25s;  
   }
 
   .link3 {
     right: 40%;
-    top: 50%;
+    top: 60%;
     animation-duration: 0.38s;  
   }
 
   .link4 {
     right: 25%;
-    top: 60%;
+    top: 70%;
     animation-duration: 0.5s;  
   }
 
