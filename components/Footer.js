@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Link from 'next/link';
 
 export class FooterBase extends React.Component {
   render() {
@@ -7,7 +8,9 @@ export class FooterBase extends React.Component {
         <div className="divider" />
         <div className="bottom-half"></div>
         <div className="message">
-          Work with me?
+          <Link href="https://www.linkedin.com/in/laurenhpetersen/">
+            Work with me?
+          </Link>
         </div>
       </div>
     );
@@ -42,5 +45,10 @@ export const Footer = styled(FooterBase)`
     font-size: 20px;
     cursor: pointer;
     letter-spacing: 3px;
+
+    > a {
+      text-decoration: none;
+      color: inherit;
+    }
   }
 `;

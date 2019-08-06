@@ -1,21 +1,35 @@
 import React from "react";
 import styled from "styled-components";
+import Link from 'next/link';
 
 export class MenuBase extends React.Component {
   render() {
+    const { toggleMenu } = this.props;
     return (
       <div className={this.props.className}>
-        <div className="link link1">
-          home
+        <div className="link link1" onClick={toggleMenu}>
+          <Link href="#home">
+            home
+          </Link>
         </div>
-        <div className="link link2">
-          resume
+        
+        <div className="link link2" onClick={toggleMenu}>
+          <Link href="#resume">
+            resume
+          </Link>
         </div>
+
+
         <div className="link link3">
-          github
+          <Link href="https://github.com/lauren-hp">
+            github
+          </Link>
         </div>
+
         <div className="link link4">
-          contact
+          <Link href="https://www.linkedin.com/in/laurenhpetersen/">
+            contact
+          </Link>
         </div>
       </div>
     );
@@ -46,6 +60,11 @@ export const Menu = styled(MenuBase)`
     font-weight: 400;
     animation-name: "pop-in";
     letter-spacing: 2px;
+
+    > a {
+      text-decoration: none;
+      color: inherit;
+    }
 
     &:hover {
       color: #8d7535;

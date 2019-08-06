@@ -15,7 +15,7 @@ export default class Page extends React.Component {
     isMenuOpen: false
   }
 
-  openMenu = () => {
+  toggleMenu = () => {
     this.setState({
       isMenuOpen: !this.state.isMenuOpen
     })
@@ -26,15 +26,19 @@ export default class Page extends React.Component {
       <Content>
         <Meta />
         <SolarSystem isMenuOpen={this.state.isMenuOpen} />
-        {this.state.isMenuOpen && <Menu />}
+        {this.state.isMenuOpen && <Menu toggleMenu={this.toggleMenu} />}
         <div className="page-content">
-          <div className="menu-button" onClick={this.openMenu}>
+          <div className="menu-button" onClick={this.toggleMenu}>
             <FaBars className={cn({"menu-open": this.state.isMenuOpen })} />
           </div>
           <div className="body-content">
-            <Header isMenuOpen={this.state.isMenuOpen} />
+            <a id="home">
+              <Header isMenuOpen={this.state.isMenuOpen} />
+            </a>
             <Me />
-            <About />
+            <a id="resume">
+              <About />
+            </a>
             <Footer />
           </div>
         </div>
