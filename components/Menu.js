@@ -35,8 +35,7 @@ export const Menu = styled(MenuBase)`
       background-color: #d1cbbd;
     }
     100% {
-      background-color: white;
-      
+      background-color: white;      
     }
   } 
 
@@ -48,7 +47,7 @@ export const Menu = styled(MenuBase)`
     animation-name: "pop-in";
     letter-spacing: 2px;
     &:hover {
-      color: #ff8282;
+      color: #764134;
       cursor: pointer;
     }
   }
