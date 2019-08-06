@@ -1,37 +1,33 @@
 import styled from "styled-components";
-// import photo from "../assets/lauren.jpg";
 
 export class FooterBase extends React.Component {
   render() {
     return (
       <div className={this.props.className}>
-        
-        <div className="footer-content">
-          {/* <img src={photo} /> */}
-        </div>
-        <div className="footer-border" />
-
+        <div className="divider" />
+        <div className="bottom-half"></div>
       </div>
     );
   }
 }
 
 export const Footer = styled(FooterBase)`
-  height: 100vh;
   position: relative;
+  height: 400px;
+  background-color: #d1cbbd;
 
-  .footer-content {
-    width: 200px;
-    height: 200px;
-    background-color: cornflowerblue;
+  .divider {
+    width: 100%;
+    height: 350px;
+    background-color: #8d7535;
   }
 
-  .footer-border {
+  .bottom-half {
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 600px;
-    background-color: #8d7535;
+    height: 400px;
+    background-color: #d1cbbd;
     clip-path: polygon(0 68%, 100% 30%, 100% 100%, 0 100%);
   }
 `;

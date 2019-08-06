@@ -6,6 +6,7 @@ import { FaBars } from "react-icons/fa";
 import { SolarSystem } from "./SolarSystem";
 import { About } from "./About";
 import { Menu } from "./Menu";
+import { Me } from "./Me";
 import { Footer } from "./Footer";
 
 export default class Page extends React.Component {
@@ -31,6 +32,7 @@ export default class Page extends React.Component {
           </div>
           <div className="body-content">
             <Header isMenuOpen={this.state.isMenuOpen} />
+            <Me />
             <About />
             <Footer />
           </div>
@@ -45,7 +47,7 @@ const Content = styled.div`
   * {
     box-sizing: border-box;
   }
-  
+
   position: fixed;
   top: 0;
   left: 0;
@@ -69,7 +71,7 @@ const Content = styled.div`
     position: absolute;
     right: 40px;
     top: 30px;
-    color: #8d7535;
+    color: white;
     z-index: 3;
 
     &:hover {
