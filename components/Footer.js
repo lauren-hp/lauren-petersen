@@ -7,7 +7,7 @@ export class FooterBase extends React.Component {
       <div className={this.props.className}>
         
         <div className="footer-content">
-          <img src={photo} />
+          {/* <img src={photo} /> */}
         </div>
         <div className="footer-border" />
 
