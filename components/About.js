@@ -86,6 +86,7 @@ export const About = styled(AboutBase)`
   .text-content {
     width: 100%;
     padding: 40px 30px 0;
+    align-self: center;
   }
 
   .resume-section {

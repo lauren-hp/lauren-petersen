@@ -21,6 +21,8 @@ export const SolarSystem = styled(SolarSystemBase)`
   > * {
     z-index: 1;
   }
+
+  pointer-events: none;
   
   .star {
     position: absolute;

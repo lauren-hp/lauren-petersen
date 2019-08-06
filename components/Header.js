@@ -43,7 +43,7 @@ export const Header = styled(HeaderBase)`
 
   .title {
     font-size: 60px;
-    padding-top: 400px;
+    padding-top: calc(50vh);
     letter-spacing: 5px;
   }
 
