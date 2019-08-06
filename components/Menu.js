@@ -6,13 +6,13 @@ export class MenuBase extends React.Component {
     return (
       <div className={this.props.className}>
         <div className="link link1">
-          about
+          home
         </div>
         <div className="link link2">
           resume
         </div>
         <div className="link link3">
-          links
+          github
         </div>
         <div className="link link4">
           contact
@@ -46,8 +46,9 @@ export const Menu = styled(MenuBase)`
     font-weight: 400;
     animation-name: "pop-in";
     letter-spacing: 2px;
+
     &:hover {
-      color: #764134;
+      color: #8d7535;
       cursor: pointer;
     }
   }

@@ -8,6 +8,7 @@ import { About } from "./About";
 import { Menu } from "./Menu";
 import { Me } from "./Me";
 import { Footer } from "./Footer";
+import * as cn from "classnames";
 
 export default class Page extends React.Component {
   state = {
@@ -28,7 +29,7 @@ export default class Page extends React.Component {
         {this.state.isMenuOpen && <Menu />}
         <div className="page-content">
           <div className="menu-button" onClick={this.openMenu}>
-            <FaBars />
+            <FaBars className={cn({"menu-open": this.state.isMenuOpen })} />
           </div>
           <div className="body-content">
             <Header isMenuOpen={this.state.isMenuOpen} />
@@ -77,5 +78,9 @@ const Content = styled.div`
     &:hover {
       cursor: pointer;
     }
+  }
+
+  .menu-open {
+    color: black;
   }
 `
