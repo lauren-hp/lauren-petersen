@@ -7,7 +7,7 @@ export class FooterBase extends React.Component {
       <div className={this.props.className}>
         <div className="divider" />
         <div className="bottom-half"></div>
-        <div className="message">
+        <div className="link">
           <a href="https://www.linkedin.com/in/laurenhpetersen/">
             <FaLinkedin size={24} />
           </a>
@@ -41,7 +41,7 @@ export const Footer = styled(FooterBase)`
     clip-path: polygon(0 68%, 100% 30%, 100% 100%, 0 100%);
   }
 
-  .message {
+  .link {
     position: absolute;
     bottom: 100px;
     right: 100px;
