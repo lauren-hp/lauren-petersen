@@ -3,8 +3,7 @@
   "scripts": {
     "dev": "next",
     "build": "next build",
-    "start": "next start",
-    "heroku-postbuild": "yarn build"
+    "start": "next start -p $PORT"
   },
   "dependencies": {
     "classnames": "^2.2.6",
