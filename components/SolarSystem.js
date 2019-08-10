@@ -28,36 +28,28 @@ export const SolarSystem = styled(SolarSystemBase)`
     position: absolute;
     border-radius: 50%;
     background-color: ${props => props.isMenuOpen ? "#ededed" : "white"};
+    height: 20px;
+    width: 20px;
+    top: 90px;
+    margin-left: -10px;
   }
 
   .star1 {
     animation: circle 10s infinite linear;
-    height: 20px;
-    width: 20px;
-    left: -270px;
-    top: 85px;
-    margin-left: 100px;
-    transform-origin: 265px center;
+    left: -150px;
+    transform-origin: 260px center;
   }
 
   .star2 {
-    animation: circle 50s infinite linear;
-    height: 20px;
-    width: 20px;
-    left: -415px;
-    top: 85px;
-    margin-left: 100px;
-    transform-origin: 415px center; 
+    animation: circle 20s infinite linear;
+    left: -300px;
+    transform-origin: 410px center; 
   }
 
   .star3 {
-    animation: circle 80s infinite linear;
-    height: 20px;
-    width: 20px;
-    left: -570px;
-    top: 85px;
-    margin-left: 100px;
-    transform-origin: 565px center; 
+    animation: circle 40s infinite linear;
+    left: -450px;
+    transform-origin: 560px center; 
   }
 
   .orbit {
