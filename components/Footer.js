@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Link from 'next/link';
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export class FooterBase extends React.Component {
   render() {
@@ -8,9 +8,13 @@ export class FooterBase extends React.Component {
         <div className="divider" />
         <div className="bottom-half"></div>
         <div className="message">
-          <Link href="https://www.linkedin.com/in/laurenhpetersen/">
-            Work with me?
-          </Link>
+          <a href="https://www.linkedin.com/in/laurenhpetersen/">
+            <FaLinkedin size={24} />
+          </a>
+
+          <a href="https://github.com/lauren-hp/">
+            <FaGithub size={24} />
+          </a>
         </div>
       </div>
     );
@@ -42,9 +46,10 @@ export const Footer = styled(FooterBase)`
     bottom: 100px;
     right: 100px;
     color: #63615a;
-    font-size: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-column-gap: 10px;
     cursor: pointer;
-    letter-spacing: 3px;
 
     > a {
       text-decoration: none;
