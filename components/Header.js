@@ -29,28 +29,23 @@ export const Header = styled(HeaderBase)`
   /* Subtract top margin */
   height: calc(100vh - 80px);
 
-  .header-text {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    padding-right: 70px;
-  }
-
   .font {
     font-family: 'Sorts Mill Goudy', serif;
     color: white;
   }
 
+  .header-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+
   .title {
-    font-size: 60px;
-    padding-top: calc(50vh);
     letter-spacing: 5px;
+    text-align: right;
   }
 
   .subtitle {
-    width: 680px;
-    padding-top: 10px;
-    font-size: 20px;
     font-weight: 300;
     line-height: 2;
     letter-spacing: 2px;
@@ -59,5 +54,34 @@ export const Header = styled(HeaderBase)`
 
   .emphasis {
     color: #8d7535;
+  }
+
+  @media screen and (max-width: 639px) {
+    .title {
+      padding-top: calc(60vh);
+      font-size: 40px;
+      padding-right: 15px;
+    }
+
+    .subtitle {
+      padding: 30px 15px 0;
+    }
+  }
+
+  @media screen and (min-width: 630px) {
+    .title {
+      padding-top: calc(50vh);
+      font-size: 60px;
+    }
+
+    .header-text {
+      padding-right: 70px;
+    }
+
+    .subtitle {
+      width: 680px;
+      font-size: 20px;
+      padding-top: 10px;
+    }
   }
 `

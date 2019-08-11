@@ -15,7 +15,13 @@ export class MeBase extends React.Component {
 export const Me = styled(MeBase)`
   position: relative;
   background-color: #d1cbbd;
-  height: 500px;
+  height: 400px;
+
+  @media screen and (max-width: 639px) {
+    .photo {
+      display: none;
+    }
+  }
 
   .photo {
     position: absolute;
@@ -32,7 +38,7 @@ export const Me = styled(MeBase)`
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 400px;
+    height: 300px;
     background-color: #8d7535;
     clip-path: polygon(0 68%, 100% 30%, 100% 100%, 0 100%);
   }

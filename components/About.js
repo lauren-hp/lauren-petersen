@@ -65,10 +65,9 @@ export class AboutBase extends React.Component {
 }
 
 export const About = styled(AboutBase)`
-  background-color: #d1cbbd;
+  background-color: #8d7535;
   min-height: calc(100vh - 80px);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  padding-top: 40px;
 
   .side-content {
     background-color: #8d7535;
@@ -77,7 +76,6 @@ export const About = styled(AboutBase)`
   .side-label {
     text-align: center;
     vertical-align: middle;
-    line-height: calc(100vh - 80px);
     font-size: 40px;
     color: white;
     letter-spacing: 10px;
@@ -85,8 +83,9 @@ export const About = styled(AboutBase)`
 
   .text-content {
     width: 100%;
-    padding: 40px 30px 0;
+    padding: 80px 30px 50px;
     align-self: center;
+    background-color: #d1cbbd;
   }
 
   .resume-section {
@@ -107,5 +106,20 @@ export const About = styled(AboutBase)`
     display: grid;
     grid-template-columns: 20px 1fr;
     line-height: 24px;
+  }
+
+  @media screen and (max-width: 639px) {
+    .side-label {
+      line-height: 200px;
+    }
+  }
+
+  @media screen and (min-width: 640px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    .side-label {
+      line-height: calc(100vh - 80px);
+    }
   }
 `

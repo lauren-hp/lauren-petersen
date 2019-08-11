@@ -36,7 +36,7 @@ export const Footer = styled(FooterBase)`
     position: absolute;
     bottom: 0;
     width: 100%;
-    height: 400px;
+    height: 300px;
     background-color: #d1cbbd;
     clip-path: polygon(0 68%, 100% 30%, 100% 100%, 0 100%);
   }

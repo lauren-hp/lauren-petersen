@@ -7,11 +7,11 @@ export class SolarSystemBase extends React.Component {
         <div className="sun" />
         <div className="orbit-1 orbit" />
         <div className="orbit-2 orbit" />
-        <div className="orbit-3 orbit" />
+        <div className="orbit-3 orbit hide-on-small" />
 
         <div className="star star1" />
         <div className="star star2" />
-        <div className="star star3" />
+        <div className="star star3 hide-on-small" />
       </div>
     )
   }
@@ -23,7 +23,13 @@ export const SolarSystem = styled(SolarSystemBase)`
   }
 
   pointer-events: none;
-  
+
+  @media screen and (max-width: 639px) {
+    .hide-on-small {
+      display: none;
+    }
+  }
+
   .star {
     position: absolute;
     border-radius: 50%;
